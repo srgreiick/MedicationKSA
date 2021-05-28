@@ -1,0 +1,1 @@
+Data structures will be outlined here and are the controllers for how things will be stored in the database
