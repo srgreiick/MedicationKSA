@@ -8,3 +8,8 @@ img{
 body {
   text-align: center;
 }
+
+button{
+  margin: 5%;
+  width: 30%;
+}
