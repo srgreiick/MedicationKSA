@@ -1,8 +1,9 @@
 let med_list = {
-    med: {
-        name:"Adenosine"
-    },
-    med: {
-        name:"Atropine"
-    }
+    meds: [
+        { name: "Adenosine", amount:1 },
+        { name: "Atropine", amount:1 },
+        { name: "Epi", amount:2}
+    ]
 };
+
+export default {med_list};
