@@ -11,7 +11,8 @@ for (let i = 0; i < r_med_list.length; i++) {
     addRow(med);
 }
 
-//Create row for medication list
+//Create row for medication list.
+//Creates a link with the param of a given medication.
 // function from https://stackoverflow.com/questions/17650776/add-remove-html-inside-div-using-javascript
 function addRow(a) {
     const div = document.createElement('div');

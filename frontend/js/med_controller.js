@@ -1,23 +1,30 @@
 import med_list from "../database/med_list.js";
 console.log("From Med Controller line 1");
 
-let medication_f_list = window.location.search.substring(1)
-console.log(medication_f_list);
+//window.location.search gets us the param
+//from the url (created in med_list_controller.js)
+let med_qstring = window.location.search.substring(1)
+console.log(med_qstring);
 
-//
+//condenses referance
 let medication = med_list.med_list.meds
 
+//loops over medications until one matching
+//html substring is found (everything after "?")
+//in the url
 for (let i = 0; i < medication.length; i++) {
-    if (medication[i].name == medication_f_list) {
+    if (medication[i].name == med_qstring) {
         console.log(medication[i]);
         medication = medication[i];
         addContent(medication);
     }
     else{
-        console.log("nope");
+        console.log("no match");
     }
 }
 
+//Populates content based on substring crossed 
+//against the medication database
 function addContent(a) {
     const div = document.createElement('div');
     div.innerHTML = "<div>"+a.name+"</div><div>"+a.amount+"</div>";
